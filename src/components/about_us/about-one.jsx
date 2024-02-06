@@ -22,9 +22,9 @@ const AboutOne = () => (
               Together, we embark on a journey to elevate your brand's presence
               and redefine the digital skies.
             </p>
-            <a href="#" className="thm-btn">
+            <button className="btn">
               Discover More
-            </a>
+            </button>
           </div>
         </div>
         <div className="col-lg-6">
