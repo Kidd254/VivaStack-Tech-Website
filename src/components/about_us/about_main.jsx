@@ -1,8 +1,8 @@
-import AboutOne from "./about-one";
+import AboutOne from './about-one';
 
 const AboutMain = () => (
-    <div>
-        <AboutOne />
-    </div>
-)
- export default AboutMain;
+  <div>
+    <AboutOne />
+  </div>
+);
+export default AboutMain;

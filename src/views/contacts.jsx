@@ -1,8 +1,9 @@
-import Layout from "./layout";
-import ContactsMain from "../components/contacts/ContactsMain";
+import Layout from './layout';
+import ContactsMain from '../components/contacts/ContactsMain';
+
 const Contacts = () => (
-    <Layout>
-        <ContactsMain />
-    </Layout>
-    );
+  <Layout>
+    <ContactsMain />
+  </Layout>
+);
 export default Contacts;

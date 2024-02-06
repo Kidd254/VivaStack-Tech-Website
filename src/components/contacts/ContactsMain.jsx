@@ -1,9 +1,9 @@
-import ContactsOne from "./ContactsOne";
+import ContactsOne from './ContactsOne';
 
 const ContactsMain = () => (
-    <div>
-        <ContactsOne />
-    </div>
+  <div>
+    <ContactsOne />
+  </div>
 );
 
 export default ContactsMain;

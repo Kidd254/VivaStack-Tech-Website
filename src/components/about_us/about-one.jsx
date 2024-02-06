@@ -30,12 +30,16 @@ const AboutOne = () => (
         <div className="col-lg-6">
           <div className="about-one__video">
             <img src="assets/images/resources/about-1-1.jpg" alt="" />
-            <a
-              href="https://www.youtube.com/watch?v=9No-FiEInLA"
-              className="about-one__video-btn video-popup"
-            >
-              <i className="fa fa-play" />
-            </a>
+            <label htmlFor="video-link" className="about-one__video-label">
+              Watch Video
+              <a
+                id="video-link"
+                href="https://www.youtube.com/watch?v=9No-FiEInLA"
+                className="about-one__video-btn video-popup"
+              >
+                <i className="fa fa-play" />
+              </a>
+            </label>
           </div>
         </div>
       </div>

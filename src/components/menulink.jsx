@@ -21,8 +21,8 @@ const MenuLink = ({ url, pageName }) => {
 };
 
 MenuLink.propTypes = {
-    pageName: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-  };
+  pageName: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
 
 export default MenuLink;

@@ -1,10 +1,9 @@
 import Main from './main';
-const Home = () => {
-  return (
-    <div>
-      <Main />
-    </div>
-  );
-};
+
+const Home = () => (
+  <div>
+    <Main />
+  </div>
+);
 
 export default Home;
