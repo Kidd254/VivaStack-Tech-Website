@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import '../assets/styles/NavBar.css';
 
 const MenuLink = ({ url, pageName }) => {
   const navLinkStatus = ({ isActive, isPending }) => {
@@ -10,7 +11,7 @@ const MenuLink = ({ url, pageName }) => {
   };
 
   return (
-    <li className="nav-item">
+    <li className="nav-item text">
       <NavLink
         to={url}
         className={navLinkStatus}

@@ -1,4 +1,4 @@
-import AboutOne from './about-one';
+import AboutOne from './AboutOne';
 
 const AboutMain = () => (
   <div>
