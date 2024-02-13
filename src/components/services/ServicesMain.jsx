@@ -7,7 +7,6 @@ const ServicesMain = () => (
       <h1>Services</h1>
       <ul className="navbar-nav">
         <MenuLink url="/home" pageName="Home" />
-        <MenuLink url="/about_us" pageName="About Us" />
         <MenuLink url="/contacts" pageName="Contacts" />
       </ul>
     </div>
