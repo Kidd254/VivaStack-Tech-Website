@@ -1,24 +1,25 @@
-/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
-import '../assets/styles/NavBar.css';
+import { Link } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles(() => ({
+  navLink: {
+    color: 'inherit',
+    textDecoration: 'none',
+    '&.active': {
+      fontWeight: 'bold',
+    },
+  },
+}));
 
 const MenuLink = ({ url, pageName }) => {
-  const navLinkStatus = ({ isActive, isPending }) => {
-    if (isActive) return 'active';
-    if (isPending) return 'pending';
-    return null;
-  };
+  const classes = useStyles();
 
   return (
-    <li className="nav-item text">
-      <NavLink
-        to={url}
-        className={navLinkStatus}
-      >
-        {pageName}
-      </NavLink>
-    </li>
+    <Link href={url} className={classes.navLink}>
+      {pageName}
+    </Link>
   );
 };
 
