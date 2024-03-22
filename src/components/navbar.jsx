@@ -1,63 +1,80 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import {
+  AppBar, Toolbar, Typography, IconButton, Box,
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { makeStyles } from '@mui/styles';
 import AppLogo from './AppLogo';
 import MenuLink from './menulink';
-import '../assets/styles/NavBar.css';
 
-const Navbar = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="container">
-      <a className="navbar-brand" href="/">
-        <AppLogo />
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav container d-flex justify-content-around">
-          <li className="nav-item">
-            <a href="#" className="nav-link dec">
-              <i className="bi bi-house-door" />
-              <MenuLink url="/home" pageName="Home" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link dec">
-              <i className="bi bi-person-fill" />
-              <MenuLink url="/about_us" pageName="About Us" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link text">
-              <i className="bi bi-wrench" />
-              <MenuLink url="/services" pageName="Services" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link text">
-              <i className="bi bi-file-earmark-text" />
-              <MenuLink url="/projects" pageName="Projects" />
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="tel:123456789" className="nav-link text">
-              <i className="bi bi-phone" />
-              <MenuLink url="/contacts" pageName="Contacts" />
-            </a>
-          </li>
-        </ul>
-      </div>
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  navLinksContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginLeft: theme.spacing(3),
+  },
+  navLink: {
+    color: 'white', // Ensure text color is set to white
+    textDecoration: 'none',
+  },
+}));
+
+const Navbar = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="static" color="primary">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <AppLogo />
+          <Typography variant="h6" className={classes.title}>
+            VivaStackTech
+          </Typography>
+          <Box className={classes.navLinksContainer}>
+            <MenuLink url="/home" pageName="Home" className={classes.navLink} />
+            <MenuLink
+              url="/about_us"
+              pageName="About Us"
+              className={classes.navLink}
+            />
+            <MenuLink
+              url="/services"
+              pageName="Services"
+              className={classes.navLink}
+            />
+            <MenuLink
+              url="/projects"
+              pageName="Projects"
+              className={classes.navLink}
+            />
+            <MenuLink
+              url="/contacts"
+              pageName="Contacts"
+              className={classes.navLink}
+            />
+          </Box>
+        </Toolbar>
+      </AppBar>
     </div>
-  </nav>
-);
+  );
+};
 
 export default Navbar;
